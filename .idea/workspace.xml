@@ -1,41 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="953e9eaa-b8a0-4067-adbb-2b0e22ab0ff5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/Pipfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/Pipfile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/app/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/app/errors.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/app/onecity_v1/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/app/onecity_v1/api/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/app/onecity_v1/api/persons.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/app/onecity_v1/api/persons_username.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/app/onecity_v1/api/users.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/app/onecity_v1/routes.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/app/onecity_v1/schemas.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/app/onecity_v1/validators.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/app/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/app/static/onecity_v1/swagger.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/app/static/swagger-ui/favicon-16x16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/app/static/swagger-ui/favicon-32x32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/app/static/swagger-ui/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/app/static/swagger-ui/oauth2-redirect.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/app/static/swagger-ui/swagger-ui-bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/app/static/swagger-ui/swagger-ui-bundle.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/app/static/swagger-ui/swagger-ui-standalone-preset.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/app/static/swagger-ui/swagger-ui-standalone-preset.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/app/static/swagger-ui/swagger-ui.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/app/static/swagger-ui/swagger-ui.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/app/static/swagger-ui/swagger-ui.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/app/static/swagger-ui/swagger-ui.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/app/v2.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/config.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/libs/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/models/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/run.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/tests/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/utils/__init__.py" beforeDir="false" />
+    <list default="true" id="059a2529-a912-40de-9b97-f4b510d0a33f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/flask-microservices.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/flask-microservices.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,72 +14,20 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Dockerfile">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/requirements.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/errors.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/run.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="50" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/swagger/indexer.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="92" column="16" selection-start-line="92" selection-start-column="16" selection-end-line="92" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="67" />
-    <option name="y" value="25" />
-    <option name="width" value="1369" />
-    <option name="height" value="733" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -122,11 +40,6 @@
             <path>
               <item name="flask-microservices" type="b2602c69:ProjectViewProjectNode" />
               <item name="flask-microservices" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flask-microservices" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flask-microservices" type="462c0819:PsiDirectoryNode" />
-              <item name="swagger" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -159,94 +72,51 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="953e9eaa-b8a0-4067-adbb-2b0e22ab0ff5" name="Default Changelist" comment="" />
-      <created>1545184039511</created>
+      <changelist id="059a2529-a912-40de-9b97-f4b510d0a33f" name="Default Changelist" comment="" />
+      <created>1545224754482</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1545184039511</updated>
-      <workItem from="1545184041834" duration="568000" />
-      <workItem from="1545184981375" duration="515000" />
-      <workItem from="1545185584676" duration="2764000" />
+      <updated>1545224754482</updated>
+      <workItem from="1545224758643" duration="587000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3847000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+    <option name="totallyTimeSpent" value="587000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1369" height="733" extended-state="6" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2604088" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24959612" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Python Console" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32956153" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32871974" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32871974" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.29584774" />
-      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="SciView" />
+      <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="R Graphics" order="4" />
-      <window_info anchor="right" id="R Packages" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Dockerfile">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/errors.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/run.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="50" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger/indexer.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="92" column="16" selection-start-line="92" selection-start-column="16" selection-end-line="92" selection-end-column="16" />
-        </state>
-      </provider>
     </entry>
   </component>
 </project>
