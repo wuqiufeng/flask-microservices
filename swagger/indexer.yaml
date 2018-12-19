@@ -10,7 +10,7 @@ info:
     email: rootfuhz@163.com
 
 host: localhost:8520
-basePath: /onecity/v1
+basePath: /v1
 schemes:
   - https
   - http
@@ -48,8 +48,8 @@ paths:
           description: A list of Person
           schema:
             $ref: '#/definitions/Persons'
-        500:
-          $ref: "#/responses/Standard500ErrorResponse"
+
+
     post:
       summary: Creates a person
       description: Adds a new person to the persons list.
@@ -64,8 +64,7 @@ paths:
           description: Persons succesfully created.
         400:
           description: Persons couldn't have been created.
-        500:
-          $ref: "#/responses/Standard500ErrorResponse"
+
 
   /persons/{username}:
     get:
@@ -84,8 +83,7 @@ paths:
             $ref: '#/definitions/Person'
         404:
           description: The Person does not exists.
-        500:
-          $ref: "#/responses/Standard500ErrorResponse"
+
 
 definitions:
   Person:

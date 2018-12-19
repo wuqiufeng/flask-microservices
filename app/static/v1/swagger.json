@@ -1,32 +1,36 @@
 {
   "swagger": "2.0",
-  "basePath": "/onecity/v1",
   "info": {
-    "description": "Onecity RESTful API",
     "version": "1.0.0",
-    "title": "Onecity RESTful\u63a5\u53e3"
+    "title": "RESTful\u63a5\u53e3",
+    "description": "RESTful API",
+    "termsOfService": "",
+    "contact": {
+      "name": "\u4ed8\u7ea2\u7af9",
+      "url": "http://mi1024.top",
+      "email": "rootfuhz@163.com"
+    }
   },
+  "basePath": "/v1",
   "consumes": [
     "application/json"
   ],
   "produces": [
     "application/json"
   ],
+  "securityDefinitions": {
+    "APIToken": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "X-API-TOKEN"
+    }
+  },
+  "security": [
+    {
+      "APIToken": []
+    }
+  ],
   "paths": {
-    "/users": {
-      "get": {
-        "tags": [
-          "\u6d4b\u8bd5"
-        ],
-        "summary": "\u7b80\u4ecb",
-        "description": "\u63cf\u8ff0",
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/persons": {
       "get": {
         "summary": "Get some persons",
