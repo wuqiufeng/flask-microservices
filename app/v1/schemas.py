@@ -14,7 +14,7 @@ from swagger_py_codegen.parser import RefNode
 ### code generating.
 ###
 
-base_path = '/onecity/v1'
+base_path = '/v1'
 
 definitions = {'definitions': {'Person': {'required': ['username'], 'properties': {'firstName': {'type': 'string'}, 'lastName': {'type': 'string'}, 'username': {'type': 'string'}}}, 'Persons': {'type': 'array', 'items': {'$ref': '#/definitions/Person'}}, 'Error': {'properties': {'code': {'type': 'string'}, 'message': {'type': 'string'}}}}, 'parameters': {}}
 
@@ -24,7 +24,6 @@ validators = {
 }
 
 filters = {
-    ('users', 'GET'): {200: {'headers': None, 'schema': None}},
     ('persons', 'GET'): {200: {'headers': None, 'schema': {'$ref': '#/definitions/Persons'}}},
     ('persons', 'POST'): {204: {'headers': None, 'schema': None}, 400: {'headers': None, 'schema': None}},
     ('persons_username', 'GET'): {200: {'headers': None, 'schema': {'$ref': '#/definitions/Person'}}, 404: {'headers': None, 'schema': None}},
