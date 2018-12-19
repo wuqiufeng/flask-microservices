@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  webapp:
+    build: .
+    ports:
+      - 5001:5000  # 端口暴露（主机端口:容器端口）
+    environment:
+      - DATABASE_URL=mysql+pymysql://root:root321@users-db:3306/users_dev
