@@ -30,6 +30,9 @@ security:
 
 
 paths:
+  /jpush:
+    post:
+      summary:
   /persons:
     get:
       summary: Get some persons

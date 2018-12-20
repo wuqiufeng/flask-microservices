@@ -14,6 +14,7 @@ flask-migrate = "*"
 swagger-py-codegen = "*"
 flask-limiter = "*"
 jsonschema = "*"
+jpush = "*"
 
 [requires]
 python_version = "3.6"
