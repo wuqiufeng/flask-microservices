@@ -18,5 +18,5 @@ RUN pip install -r requirements.txt
 ADD . /usr/src/app
 
 # 运行服务
-#CMD python run.py runserver -h 0.0.0.0
-CMD ["python", "run.py"]
+CMD python run.py
+#CMD ["python", "run.py"]
