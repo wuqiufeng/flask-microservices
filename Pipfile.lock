@@ -124,10 +124,10 @@
         },
         "jpush": {
             "hashes": [
-                "sha256:38c13b9ffc7a3ee8e61453c8a2b6e1edbf03b5e432dd0b9533777900a2157910"
+                "sha256:1de7c5cd0be9dffa6ccb73b11e2d6d44f690c929cf47b1cd05d49261e79815f9"
             ],
             "index": "pypi",
-            "version": "==3.3.4"
+            "version": "==3.3.5"
         },
         "json-spec": {
             "hashes": [
