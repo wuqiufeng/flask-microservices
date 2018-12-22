@@ -7,9 +7,9 @@ from . import Resource
 from .. import schemas
 
 
-class Jpush(Resource):
+class JpushMsg(Resource):
 
     def post(self):
+        print(g.json)
 
-        
-        pass
+        return None, 200, None

@@ -10,7 +10,7 @@ info:
     email: rootfuhz@163.com
 
 host: localhost:8520
-basePath: /v1
+basePath: /pushmsg/v1
 schemes:
   - https
   - http
@@ -35,7 +35,7 @@ paths:
       tags:
         - 激光推送消息
       summary: 推送消息到APP
-      description: 哈哈哈哈哈
+      description:
       parameters:
         - name: jpush
           in: body
@@ -49,6 +49,9 @@ paths:
               contents:
                 description: 推送内容
                 type: string
+      responses:
+        200:
+          description: OK
 
 
   /persons:
