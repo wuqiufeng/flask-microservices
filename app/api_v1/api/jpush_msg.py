@@ -18,6 +18,6 @@ class JpushMsg(Resource):
         alert = g.json['alert'] if "alert" in g.json else None
 
         jpush_client = JpushNotify()
-        for account in accounts:
+        for account in accounts.strip(',').split(','):
             jpush_client.send_notify(account, contents, alert)
-        return None, 200, None
+        return None, 404, None

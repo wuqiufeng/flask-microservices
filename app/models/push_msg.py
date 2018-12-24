@@ -4,7 +4,7 @@
 # @Email   : 
 # @File    : push_msg.py
 # ---------------------
-from sqlalchemy import Text, String, Integer, Column
+from sqlalchemy import Text, String, Integer, Column, SmallInteger
 
 from app.models.base import Base
 
@@ -14,7 +14,7 @@ class JpushMsg(Base):
     account = Column(String(64), nullable=False, comment="推送的账号")
     alert = Column(String(128), comment="警报")
     contents = Column(Text, nullable=False, comment="推送的内容")
-    code = Column(String(32), nullable=False, comment="推送状态")
+    code = Column(SmallInteger, nullable=False, comment="错误码")
     message = Column(String(128), comment="错误原因")
 
     def __repr__(self):

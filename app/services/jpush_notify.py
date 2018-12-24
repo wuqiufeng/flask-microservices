@@ -5,10 +5,13 @@
 # @File    : jpush_notify.py
 # ---------------------
 import jpush
+import json
 from jpush import common
 
 from app import db
 from app.config import Config
+from app.libs.error_code import NotFound
+from app.libs.errors import APIException
 from app.models.push_msg import JpushMsg
 
 
@@ -29,31 +32,23 @@ class JpushNotify():
         # ios_ctx = jpush.ios(extras=context, sound_disable=False)
 
         jpush_msg = JpushMsg()
+        jpush_msg.account = account
         jpush_msg.contents = contents
         jpush_msg.alert = alert
 
         push.notification = jpush.notification(alert=alert, android=contents, ios=contents)
-        try:
-            response = push.send()
-            jpush_msg.account = account
-            jpush_msg.code = 'OK'
-        except common.Unauthorized:
-            print("Unauthorized")
-            jpush_msg.code = 'ERROR'
-            jpush_msg.msg = 'Unauthorized'
-            # raise common.Unauthorized("Unauthorized")
-        except common.APIConnectionException:
-            print("conn")
-            jpush_msg.code = 'ERROR'
-            jpush_msg.msg = 'conn error'
-            # raise common.APIConnectionException("conn")
-        except common.JPushFailure:
-            jpush_msg.code = 'ERROR'
-            jpush_msg.msg = 'JPushFailure'
-        except:
-            jpush_msg.code = 'ERROR'
-            jpush_msg.msg = 'unknown error'
-        db.session.add(jpush_msg)
+        with db.auto_commit():
+            try:
+                response = push.send()
+                jpush_msg.code = 200
+                db.session.add(jpush_msg)
+            except Exception as e:
+                print(e)
+                jpush_msg.code = e.error['code']
+                jpush_msg.message = e.error['message']
+                db.session.add(jpush_msg)
+                raise APIException(msg = jpush_msg.message, error_code=jpush_msg.code)
+
 
 if __name__ == '__main__':
     msg = {
