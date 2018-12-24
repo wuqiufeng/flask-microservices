@@ -4,10 +4,25 @@
 # @Email   : 
 # @File    : base.py
 # ---------------------
+from contextlib import contextmanager
+from flask_sqlalchemy import SQLAlchemy as _SQLAlcmemy, BaseQuery
 from datetime import datetime
 from sqlalchemy import Column, SmallInteger, DateTime
-from app import db
 
+class SQLAlchemy(_SQLAlcmemy):
+    @contextmanager
+    def auto_commit(self):
+        try:
+            yield
+            self.session.commit()
+        except Exception as e:
+            self.session.rollback()
+            raise e
+        finally:
+            self.session.close()
+
+
+db = SQLAlchemy()
 
 class Base(db.Model):
     __abstract__ = True
@@ -15,7 +30,7 @@ class Base(db.Model):
     status = Column(SmallInteger, default=1)
 
     def __init__(self):
-        self.create_time = int(datetime.now())
+        self.create_time = datetime.now()
 
     def __getitem__(self, item):
         return getattr(self, item)

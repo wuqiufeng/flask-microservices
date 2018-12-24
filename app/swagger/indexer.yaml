@@ -10,7 +10,7 @@ info:
     email: rootfuhz@163.com
 
 host: localhost:8520
-basePath: /pushmsg/v1
+basePath: /api/v1
 schemes:
   - https
   - http
@@ -43,12 +43,14 @@ paths:
           schema:
             type: object
             properties:
-              account:
+              accounts:
                 description: 用户账号
                 type: string
               contents:
                 description: 推送内容
                 type: string
+              alert:
+
       responses:
         200:
           description: OK

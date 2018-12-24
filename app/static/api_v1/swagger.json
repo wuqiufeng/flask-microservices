@@ -11,7 +11,7 @@
       "email": "rootfuhz@163.com"
     }
   },
-  "basePath": "/pushmsg/v1",
+  "basePath": "/api/v1",
   "consumes": [
     "application/json"
   ],
@@ -46,7 +46,7 @@
             "schema": {
               "type": "object",
               "properties": {
-                "account": {
+                "accounts": {
                   "description": "\u7528\u6237\u8d26\u53f7",
                   "type": "string"
                 },

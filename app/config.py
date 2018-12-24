@@ -7,8 +7,12 @@
 import os
 
 
+base_dir = os.path.abspath(os.path.dirname(__file__))
+static_path = os.path.join(base_dir, "static")
+
 class Config:
     SQLALCHEMY_DATABASE_URI = "mysql+pymysql://root:ace123@111.231.87.209:3306/test"
+    SQLALCHEMY_TRACK_MODIFICATIONS = True
     # Token生成串
     JWT_SECRET_KEY = os.environ.get('JWT_SECRET_KEY') or "38ea77df71614caeb001b3b1c1c608d7"
     # Token过期时间
@@ -17,14 +21,18 @@ class Config:
     JPUSH_API_KEY = "977813ed9ea938e2e56c9608"
     JPUSH_MASTER_SECRET = "c23492ffbf7e3348db3be6c1"
 
+    UPLOAD_FOLDER = os.path.join(base_dir, "uploads")
+
 
 
 class IntConfig(Config):
     SQLALCHEMY_DATABASE_URI = "mysql+pymysql://root:ace123@111.231.87.209:3306/test"
 
 
+
 class DevConfig(IntConfig):
     SQLALCHEMY_DATABASE_URI = "mysql+pymysql://root:ace123@111.231.87.209:3306/test"
+    SQLALCHEMY_TRACK_MODIFICATIONS = True
 
 
 config = {

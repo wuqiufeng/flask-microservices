@@ -14,12 +14,12 @@ from swagger_py_codegen.parser import RefNode
 ### code generating.
 ###
 
-base_path = '/pushmsg/v1'
+base_path = '/api/v1'
 
 definitions = {'definitions': {'Person': {'required': ['username'], 'properties': {'firstName': {'type': 'string'}, 'lastName': {'type': 'string'}, 'username': {'type': 'string'}}}, 'Persons': {'type': 'array', 'items': {'$ref': '#/definitions/Person'}}, 'Error': {'properties': {'code': {'type': 'string'}, 'message': {'type': 'string'}}}}, 'parameters': {}}
 
 validators = {
-    ('jpush_msg', 'POST'): {'json': {'type': 'object', 'properties': {'account': {'description': '用户账号', 'type': 'string'}, 'contents': {'description': '推送内容', 'type': 'string'}}}},
+    ('jpush_msg', 'POST'): {'json': {'type': 'object', 'properties': {'accounts': {'description': '用户账号', 'type': 'string'}, 'contents': {'description': '推送内容', 'type': 'string'}}}},
     ('persons', 'GET'): {'args': {'required': [], 'properties': {'pageSize': {'description': 'Number of persons returned', 'type': 'integer'}, 'pageNumber': {'description': 'Page number', 'type': 'integer'}}}},
     ('persons', 'POST'): {'json': {'$ref': '#/definitions/Person'}},
 }
