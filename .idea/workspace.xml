@@ -1,39 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ae694ba4-9e16-47ed-a541-da15cc0005c2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/libs/error_code.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/libs/errors.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/push_msg.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/push_msg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pushmsg_v1/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pushmsg_v1/api/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pushmsg_v1/api/jpush_msg.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pushmsg_v1/api/persons.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pushmsg_v1/api/persons_username.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pushmsg_v1/routes.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pushmsg_v1/schemas.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pushmsg_v1/validators.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/jpush_notify.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/jpush_notify.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/pushmsg_v1/swagger.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/swagger-ui/favicon-16x16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/swagger-ui/favicon-32x32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/swagger-ui/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/swagger-ui/oauth2-redirect.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/swagger-ui/swagger-ui-bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/swagger-ui/swagger-ui-bundle.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/swagger-ui/swagger-ui-standalone-preset.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/swagger-ui/swagger-ui-standalone-preset.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/swagger-ui/swagger-ui.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/swagger-ui/swagger-ui.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/swagger-ui/swagger-ui.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/swagger-ui/swagger-ui.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/v1/swagger.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/swagger/indexer.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/swagger/indexer.yaml" afterDir="false" />
-    </list>
+    <list default="true" id="ae694ba4-9e16-47ed-a541-da15cc0005c2" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +19,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/services/jpush_notify.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
+            <state relative-caret-position="286">
               <caret line="60" column="29" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
               <folding>
                 <element signature="e#139#151#0" expanded="true" />
@@ -336,12 +304,12 @@
       <workItem from="1545376992751" duration="60000" />
       <workItem from="1545377097306" duration="5420000" />
       <workItem from="1545442197357" duration="19812000" />
-      <workItem from="1545615400952" duration="16751000" />
+      <workItem from="1545615400952" duration="17151000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43204000" />
+    <option name="totallyTimeSpent" value="43604000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1369" height="733" extended-state="6" />
@@ -351,7 +319,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2733564" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2733564" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -616,7 +584,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/services/jpush_notify.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
+        <state relative-caret-position="286">
           <caret line="60" column="29" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
           <folding>
             <element signature="e#139#151#0" expanded="true" />
