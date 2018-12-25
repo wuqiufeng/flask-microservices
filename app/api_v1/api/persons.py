@@ -12,9 +12,9 @@ class Persons(Resource):
     def get(self):
         print(g.args)
 
-        return [], 200, None
+        return {'data':'adsadsad'}, 200, None
 
     def post(self):
         print(g.json)
 
-        return None, 204, None
+        return {}, 204, None

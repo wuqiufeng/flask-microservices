@@ -15,7 +15,6 @@ swagger-py-codegen = "*"
 flask-limiter = "*"
 jsonschema = "*"
 jpush = "*"
-dotenv = "*"
 python-dotenv = "*"
 
 [requires]

@@ -16,7 +16,7 @@ from swagger_py_codegen.parser import RefNode
 
 base_path = '/api/v1'
 
-definitions = {'definitions': {'Person': {'required': ['username'], 'properties': {'firstName': {'type': 'string'}, 'lastName': {'type': 'string'}, 'username': {'type': 'string'}}}, 'Persons': {'type': 'array', 'items': {'$ref': '#/definitions/Person'}}, 'Error': {'properties': {'code': {'type': 'string'}, 'message': {'type': 'string'}}}}, 'parameters': {}}
+definitions = {'definitions': {'Person': {'required': ['username'], 'properties': {'firstName': {'type': 'string'}, 'lastName': {'type': 'string'}, 'username': {'type': 'string'}}}, 'Persons': {'type': 'array', 'items': {'$ref': '#/definitions/Person'}}, 'Error': {'properties': {'code': {'type': 'string'}, 'message': {'type': 'string'}}}, 'ApiResponse': {'type': 'object', 'properties': {'status': {'type': 'integer', 'format': 'int32'}, 'data': {'type': 'string'}, 'message': {'type': 'string'}}}, 'ErrorResponse': {'type': 'object', 'properties': {'status': {'type': 'integer', 'format': 'int32'}, 'message': {'type': 'string'}}}}, 'parameters': {}}
 
 validators = {
     ('jpush_msg', 'POST'): {'json': {'type': 'object', 'properties': {'accounts': {'description': '用户账号', 'type': 'string'}, 'contents': {'description': '推送内容', 'type': 'string'}}}},
@@ -25,10 +25,10 @@ validators = {
 }
 
 filters = {
-    ('jpush_msg', 'POST'): {200: {'headers': None, 'schema': None}},
-    ('persons', 'GET'): {200: {'headers': None, 'schema': {'$ref': '#/definitions/Persons'}}},
-    ('persons', 'POST'): {204: {'headers': None, 'schema': None}, 400: {'headers': None, 'schema': None}},
-    ('persons_username', 'GET'): {200: {'headers': None, 'schema': {'$ref': '#/definitions/Person'}}, 404: {'headers': None, 'schema': None}},
+    ('jpush_msg', 'POST'): {200: {'headers': None, 'schema': {'$ref': '#/definitions/ApiResponse'}}, 400: {'headers': None, 'schema': None}},
+    ('persons', 'GET'): {200: {'headers': None, 'schema': {'$ref': '#/definitions/ApiResponse'}}},
+    ('persons', 'POST'): {204: {'headers': None, 'schema': {'$ref': '#/definitions/ApiResponse'}}, 400: {'headers': None, 'schema': None}},
+    ('persons_username', 'GET'): {200: {'headers': None, 'schema': {'$ref': '#/definitions/ApiResponse'}}, 404: {'headers': None, 'schema': None}},
 }
 
 scopes = {

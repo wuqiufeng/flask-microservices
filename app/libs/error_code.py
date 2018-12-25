@@ -4,6 +4,8 @@
 # @Email   : 
 # @File    : error_code.py
 # ---------------------
+from werkzeug.exceptions import HTTPException
+
 from app.libs.errors import APIException
 
 
@@ -28,6 +30,11 @@ class ClientTypeError(APIException):
     code = 400
     msg = 'client is invalid'
     error_code = 1006
+
+    # def __init__(self):
+    #     super(ClientTypeError, self).__init__()
+    #     self.description = "1223231321312321"
+    #     self.data = {"status": 400, "message": "sdadasdasdsada"}
 
 
 class ParameterException(APIException):

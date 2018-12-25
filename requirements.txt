@@ -14,6 +14,7 @@ flex==6.13.2
 idna==2.8
 itsdangerous==1.1.0
 jinja2==2.10
+jpush==3.3.5
 json-spec==0.10.1
 jsonpointer==1.14
 jsonschema==2.6.0
@@ -22,6 +23,7 @@ mako==1.0.7
 markupsafe==1.1.0
 pymysql==0.9.3
 python-dateutil==2.7.5
+python-dotenv==0.10.1
 python-editor==1.0.3
 pytz==2018.7
 pyyaml==3.12
