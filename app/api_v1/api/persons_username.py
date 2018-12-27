@@ -11,4 +11,4 @@ class PersonsUsername(Resource):
 
     def get(self, username):
 
-        return {}, 200, None
+        return {'username': 'something'}, 200, None

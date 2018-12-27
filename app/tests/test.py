@@ -31,28 +31,3 @@ string =''' {
 print(string)
 temp = json.loads(string)
 print(temp['messages'])
-
-class JpushMsg(Resource):
-
-    def post(self):
-        print(g.json)
-
-        accounts = g.json["accounts"]
-        contents = g.json['contents']
-        alert = g.json['alert'] if "alert" in g.json else None
-        #
-        # jpush_client = JpushNotify()
-        # for account in accounts.strip(',').split(','):
-        #     jpush_client.send_notify(account, contents, alert)
-        data = {
-            "aaa": "hahaha",
-            "bbbb": "dsdadsad"
-        }
-        # return json.dumps(data)
-        # return {"status": 200, "data": data}, 200, None
-        # return ClientTypeError()
-        # return {"status": 200, "data": data}, 200, None
-        # return Success()
-        # raise Success()
-        return {"status": 200, "data": data}, 200, None
-        # return {}, 200, None
