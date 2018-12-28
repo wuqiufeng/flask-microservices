@@ -20,8 +20,12 @@ class Config:
     # 极光
     JPUSH_API_KEY = "977813ed9ea938e2e56c9608"
     JPUSH_MASTER_SECRET = "c23492ffbf7e3348db3be6c1"
+    # 云片
+    YUNPIAN_AK = "3dd31dd63fe4a849f9576531af5633db"
 
     UPLOAD_FOLDER = os.path.join(base_dir, "uploads")
+
+
 
 
 

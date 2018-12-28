@@ -16,6 +16,7 @@ flask-limiter = "*"
 jsonschema = "*"
 jpush = "*"
 python-dotenv = "*"
+urllib = "*"
 
 [requires]
 python_version = "3.6"

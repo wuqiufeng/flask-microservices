@@ -10,7 +10,7 @@ from jpush import common
 
 from app import db
 from app.config import Config
-from app.libs.error_code import NotFound
+from app.libs.error_code import NotFound, ClientTypeError, Success
 from app.libs.errors import APIException
 from app.models.push_msg import JpushMsg
 
@@ -37,18 +37,18 @@ class JpushNotify():
         jpush_msg.alert = alert
 
         push.notification = jpush.notification(alert=alert, android=contents, ios=contents)
-        with db.auto_commit():
-            try:
-                response = push.send()
-                jpush_msg.code = 200
-                db.session.add(jpush_msg)
-            except Exception as e:
-                print(e)
-                jpush_msg.code = e.error['code']
-                jpush_msg.message = e.error['message']
-                db.session.add(jpush_msg)
-                raise APIException(msg = jpush_msg.message, error_code=jpush_msg.code)
-
+        try:
+            response = push.send()
+            jpush_msg.code = 200
+            db.session.add(jpush_msg)
+        except Exception as e:
+            jpush_msg.code = e.error['code']
+            jpush_msg.message = e.error['message']
+            db.session.add(jpush_msg)
+            # raise ClientTypeError(msg = jpush_msg.message, error_code=jpush_msg.code)
+            # raise ClientTypeError(msg="qwerqwer",  error_code=1001)
+            # raise Success()
+            raise ClientTypeError()
 
 if __name__ == '__main__':
     msg = {
