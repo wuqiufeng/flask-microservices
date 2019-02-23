@@ -1,0 +1,99 @@
+swagger: '2.0'
+info:
+  version:  1.0.0
+  title: RESTful接口
+  description: RESTful API
+  termsOfService: ""
+  contact:
+    name: 付红竹
+    url: http://mi1024.top
+    email: rootfuhz@163.com
+
+host: localhost:8520
+basePath: /api/v1
+schemes:
+  - https
+  - http
+
+consumes:
+  - application/json
+produces:
+  - application/json
+
+securityDefinitions:
+  APIToken:
+    type: apiKey
+    in: header
+    name: X-API-TOKEN
+security:
+  - APIToken: []
+
+
+paths:
+  /persons:
+    get:
+      summary: Get some persons
+      description: Returns a list containing all persons
+      parameters:
+        - name: pageSize
+          in: query
+          description: Number of persons returned
+          type: integer
+        - name: pageNumber
+          in: query
+          description: Page number
+          type: integer
+      responses:
+        200:
+          description: A list of Person
+          schema:
+            $ref: '#/definitions/ApiResponse'
+
+
+definitions:
+  # General Response
+  ApiResponse:
+    type: object
+    properties:
+      status:
+        type: integer
+      data:
+        type: string
+      message:
+        type: string
+      request:
+        type: string
+
+
+  ErrorResponse:
+    type: object
+    properties:
+      status:
+        type: integer
+        format: int32
+      message:
+        type: string
+
+
+
+  Person:
+    required:
+      - username
+    properties:
+      firstName:
+        type: string
+      lastName:
+        type: string
+      username:
+        type: string
+  Persons:
+    type: array
+    items:
+      $ref: '#/definitions/Person'
+
+
+responses:
+  Standard500ErrorResponse:
+    description: An unexpected error occured
+    schema:
+      $ref: '#/definitions/Error'

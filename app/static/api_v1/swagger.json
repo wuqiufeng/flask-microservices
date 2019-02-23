@@ -31,46 +31,6 @@
     }
   ],
   "paths": {
-    "/jpush/msg": {
-      "post": {
-        "tags": [
-          "\u6fc0\u5149\u63a8\u9001\u6d88\u606f"
-        ],
-        "summary": "\u63a8\u9001\u6d88\u606f\u5230APP",
-        "description": null,
-        "parameters": [
-          {
-            "name": "jpush",
-            "in": "body",
-            "description": "\u63a8\u9001\u6d88\u606f",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "accounts": {
-                  "description": "\u7528\u6237\u8d26\u53f7",
-                  "type": "string"
-                },
-                "contents": {
-                  "description": "\u63a8\u9001\u5185\u5bb9",
-                  "type": "string"
-                }
-              }
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "$ref": "#/definitions/ApiResponse"
-            }
-          },
-          "400": {
-            "description": "Persons couldn't have been created."
-          }
-        }
-      }
-    },
     "/persons": {
       "get": {
         "summary": "Get some persons",
@@ -95,57 +55,6 @@
             "schema": {
               "$ref": "#/definitions/ApiResponse"
             }
-          }
-        }
-      },
-      "post": {
-        "summary": "Creates a person",
-        "description": "Adds a new person to the persons list.",
-        "parameters": [
-          {
-            "name": "person",
-            "in": "body",
-            "description": "The person to create.",
-            "schema": {
-              "$ref": "#/definitions/Person"
-            }
-          }
-        ],
-        "responses": {
-          "204": {
-            "description": "Persons succesfully created.",
-            "schema": {
-              "$ref": "#/definitions/ApiResponse"
-            }
-          },
-          "400": {
-            "description": "Persons couldn't have been created."
-          }
-        }
-      }
-    },
-    "/persons/{username}": {
-      "get": {
-        "summary": "Gets a person",
-        "description": "Returns a single person for its username",
-        "parameters": [
-          {
-            "name": "username",
-            "in": "path",
-            "required": true,
-            "description": "The person's username",
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "A Person",
-            "schema": {
-              "$ref": "#/definitions/ApiResponse"
-            }
-          },
-          "404": {
-            "description": "The Person does not exists."
           }
         }
       }
@@ -188,14 +97,19 @@
       "type": "object",
       "properties": {
         "status": {
-          "type": "integer",
-          "format": "int32"
+          "type": "integer"
         },
         "data": {
           "type": "string"
         },
-        "message": {
+        "msg": {
           "type": "string"
+        },
+        "code": {
+          "type": "integer"
+        },
+        "error_code": {
+          "type": "integer"
         }
       }
     },

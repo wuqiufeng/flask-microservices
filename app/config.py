@@ -27,8 +27,6 @@ class Config:
 
 
 
-
-
 class IntConfig(Config):
     SQLALCHEMY_DATABASE_URI = "mysql+pymysql://root:ace123@111.231.87.209:3306/test"
 
@@ -41,5 +39,5 @@ class DevConfig(IntConfig):
 
 config = {
     "development": DevConfig,
-    "default": Config
+    "default": IntConfig
 }

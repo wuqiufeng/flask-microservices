@@ -1,22 +1,24 @@
 FROM python:3.6-alpine
 
 
-#EXPOSE 9090
-
+#ENV UWSGI_INI /app/uwsgi.ini
+#ENV PYTHONPATH=/app
 
 # 设置工作目录
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
-# 添加依赖（利用Docker 的缓存）
-ADD ./requirements.txt /usr/src/app/requirements.txt
 
-# 安装依赖
-RUN pip install -r requirements.txt
+#COPY ./app /app
+#WORKDIR /app
 
-# 添加应用
+
 ADD . /usr/src/app
+#RUN /bin/sh -c pip install uwsgi
+COPY ./requirements.txt /usr/src/app/requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
+#RUN chmod +x ./start.sh
 # 运行服务
-CMD python run.py
-#CMD ["python", "run.py"]
+CMD [ "python", "run.py" ]
+#CMD ["./start.sh"]

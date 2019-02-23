@@ -1,9 +1,11 @@
-version: "3"
+version: "2"
 
 services:
-  webapp:
+  app:
+    image: flask
     build: .
     ports:
       - 5001:8520  # 端口暴露（主机端口:容器端口）
+    container_name: flask_service
     environment:
       - DATABASE_URL=mysql+pymysql://root:root321@users-db:3306/users_dev

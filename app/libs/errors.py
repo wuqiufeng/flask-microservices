@@ -10,31 +10,30 @@ from flask import request
 from werkzeug.exceptions import HTTPException
 
 
-
-
 class APIException(HTTPException):
     code = 500
-    error_code = 999
-    message = 'sorry, we make a mistake'
+    error_code = 9999
+    msg = 'sorry, we make a mistake'
 
-    def __init__(self, error_code=None, message=None, code=None):
+    def __init__(self, error_code=None, msg=None, code=None):
         if code:
             self.code = code
         if error_code:
             self.error_code = error_code
-        if message:
-            self.message = message
-            self.description = message
-        super(APIException, self).__init__(self.message, None)
+        if msg:
+            self.msg = msg
+        self.data = self.get_data()
+        super(APIException, self).__init__(self.msg, None)
 
 
-    def get_body(self, environ=None):
-        body = dict(
+    def get_data(self, environ=None):
+        data = dict(
             status=self.error_code,
-            message=self.message,
+            msg=self.msg,
             request=request.method + ' ' + self.get_url_no_param()
         )
-        self.data = body
+        return data
+
 
     @staticmethod
     def get_url_no_param():
@@ -44,14 +43,9 @@ class APIException(HTTPException):
 
 
 
-
-
-
-
-
 class APIExceptionTest(HTTPException):
     code = 500
-    error_code = 999
+    error_code = 9999
     message = 'sorry, we make a mistake'
     data = {}
 
@@ -64,6 +58,7 @@ class APIExceptionTest(HTTPException):
         if message:
             self.message = message
         super(APIException, self).__init__(self.message, None)
+
 
     def get_body(self, environ=None):
         body = dict(

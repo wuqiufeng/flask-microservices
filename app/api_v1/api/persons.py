@@ -3,6 +3,7 @@ from __future__ import absolute_import, print_function
 
 from flask import request, g
 
+from app.libs.error_code import DeleteSuccess
 from . import Resource
 from .. import schemas
 
@@ -11,10 +12,6 @@ class Persons(Resource):
 
     def get(self):
         print(g.args)
+        return DeleteSuccess()
 
-        return {'data':'adsadsad'}, 200, None
-
-    def post(self):
-        print(g.json)
-
-        return {}, 204, None
+        # return {}, 200, None
