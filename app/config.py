@@ -29,11 +29,16 @@ class Config:
 
 class IntConfig(Config):
     SQLALCHEMY_DATABASE_URI = "mysql+pymysql://root:ace123@111.231.87.209:3306/test"
+    REDIS_HOST = "test.91mogo.com"
+    REDIS_PASSWD = "c9deb416b1b7ad50321710cb53cab2f3"
+    PRINT_SQL = False
 
 
 
 class DevConfig(IntConfig):
     SQLALCHEMY_DATABASE_URI = "mysql+pymysql://root:ace123@111.231.87.209:3306/test"
+    REDIS_HOST = "test.91mogo.com"
+    REDIS_PASSWD = "c9deb416b1b7ad50321710cb53cab2f3"
     SQLALCHEMY_TRACK_MODIFICATIONS = True
 
 

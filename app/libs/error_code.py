@@ -5,8 +5,11 @@
 # @File    : error_code.py
 # ---------------------
 
-# Flask_limiter
+
 from app.libs.errors import APIException
+
+USER_NOT_FOUND = 1001
+USER_EXISTED = 1002
 
 errors = {
     "TooManyRequests": {
@@ -37,6 +40,7 @@ class ParameterException(APIException):
     code = 400
     msg = 'invalid parameter'
     error_code = 1000
+
 
 
 class AuthFailed(APIException):

@@ -30,22 +30,30 @@ security:
 
 
 paths:
-  /persons:
-    get:
-      summary: Get some persons
-      description: Returns a list containing all persons
+  /register:
+    post:
+      tags:
+        - 用户
+      summary: 注册用户
       parameters:
-        - name: pageSize
-          in: query
-          description: Number of persons returned
-          type: integer
-        - name: pageNumber
-          in: query
-          description: Page number
-          type: integer
+      - name: user
+        in: body
+        required: true
+        schema:
+          type: object
+          properties:
+            name:
+              description: 用户帐号
+              type: string
+            pwd:
+              description: 登录密码
+              type: string
+          required:
+            - name
+            - pwd
       responses:
-        200:
-          description: A list of Person
+        201:
+          description: 创建成功
           schema:
             $ref: '#/definitions/ApiResponse'
 
@@ -59,7 +67,7 @@ definitions:
         type: integer
       data:
         type: string
-      message:
+      msg:
         type: string
       request:
         type: string
@@ -68,32 +76,33 @@ definitions:
   ErrorResponse:
     type: object
     properties:
-      status:
+      error_code:
         type: integer
         format: int32
-      message:
+      msg:
+        type: string
+      request:
         type: string
 
-
-
-  Person:
-    required:
-      - username
+  User:
+    type: object
     properties:
-      firstName:
+      name:
         type: string
-      lastName:
+        minLength: 2
+        maxLength: 32
+      password:
         type: string
-      username:
+        pattern: ^[A-Za-z0-9_*&$#@]{6,22}$
+        minLength: 6
+        maxLength: 32
+      phone:
         type: string
-  Persons:
-    type: array
-    items:
-      $ref: '#/definitions/Person'
+        pattern: ^1[0-9]{10}$
+      email:
+        type: string
+        pattern: ^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$
+    required:
+    - name
+    - password
 
-
-responses:
-  Standard500ErrorResponse:
-    description: An unexpected error occured
-    schema:
-      $ref: '#/definitions/Error'

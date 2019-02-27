@@ -31,6 +31,46 @@
     }
   ],
   "paths": {
+    "/register": {
+      "post": {
+        "tags": [
+          "\u7528\u6237"
+        ],
+        "summary": "\u6ce8\u518c\u7528\u6237",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "description": "\u7528\u6237\u5e10\u53f7",
+                  "type": "string"
+                },
+                "pwd": {
+                  "description": "\u767b\u5f55\u5bc6\u7801",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "pwd"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "\u521b\u5efa\u6210\u529f",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse"
+            }
+          }
+        }
+      }
+    },
     "/persons": {
       "get": {
         "summary": "Get some persons",
@@ -53,7 +93,7 @@
           "200": {
             "description": "A list of Person",
             "schema": {
-              "$ref": "#/definitions/ApiResponse"
+              "$ref": "#/definitions/ErrorResponse"
             }
           }
         }
@@ -61,6 +101,66 @@
     }
   },
   "definitions": {
+    "ApiResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "integer"
+        },
+        "data": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "request": {
+          "type": "string"
+        }
+      }
+    },
+    "ErrorResponse": {
+      "type": "object",
+      "properties": {
+        "error_code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "request": {
+          "type": "string"
+        }
+      }
+    },
+    "User": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 32
+        },
+        "password": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_*&$#@]{6,22}$",
+          "minLength": 6,
+          "maxLength": 32
+        },
+        "phone": {
+          "type": "string",
+          "pattern": "^1[0-9]{10}$"
+        },
+        "email": {
+          "type": "string",
+          "pattern": "^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)+$"
+        }
+      },
+      "required": [
+        "name",
+        "password"
+      ]
+    },
     "Person": {
       "required": [
         "username"
@@ -81,56 +181,6 @@
       "type": "array",
       "items": {
         "$ref": "#/definitions/Person"
-      }
-    },
-    "Error": {
-      "properties": {
-        "code": {
-          "type": "string"
-        },
-        "message": {
-          "type": "string"
-        }
-      }
-    },
-    "ApiResponse": {
-      "type": "object",
-      "properties": {
-        "status": {
-          "type": "integer"
-        },
-        "data": {
-          "type": "string"
-        },
-        "msg": {
-          "type": "string"
-        },
-        "code": {
-          "type": "integer"
-        },
-        "error_code": {
-          "type": "integer"
-        }
-      }
-    },
-    "ErrorResponse": {
-      "type": "object",
-      "properties": {
-        "status": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "message": {
-          "type": "string"
-        }
-      }
-    }
-  },
-  "responses": {
-    "Standard500ErrorResponse": {
-      "description": "An unexpected error occured",
-      "schema": {
-        "$ref": "#/definitions/Error"
       }
     }
   }
