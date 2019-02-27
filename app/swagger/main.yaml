@@ -56,6 +56,10 @@ paths:
           description: 创建成功
           schema:
             $ref: '#/definitions/ApiResponse'
+        400:
+          description: 请求成功，但是业务失败
+          schema:
+            $ref: '#/definitions/ErrorResponse'
 
 
 definitions:
@@ -72,7 +76,6 @@ definitions:
       request:
         type: string
 
-
   ErrorResponse:
     type: object
     properties:
@@ -83,6 +86,7 @@ definitions:
         type: string
       request:
         type: string
+
 
   User:
     type: object

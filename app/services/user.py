@@ -1,7 +1,7 @@
 import uuid
 
 from app.libs.enums import ClientTypeEnum
-from app.libs.error_code import Success
+from app.libs.error_code import Success, USER_EXISTED
 from app.libs.errors import APIException
 from app.models import query_session, action_session
 from app.models.base import db
@@ -21,7 +21,8 @@ class UsersService(BaseService):
     def register_user_by_account(self, data=None):
         user = Users.query.filter_by(name=data['name']).all()
         if user:
-            raise APIException()
+            print('1111111111111111111')
+            raise APIException(USER_EXISTED, 'User: {} already existed'.format(data['name']))
 
         with action_session() as session:
             user = Users()

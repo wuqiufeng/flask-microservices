@@ -16,16 +16,14 @@ from swagger_py_codegen.parser import RefNode
 
 base_path = '/api/v1'
 
-definitions = {'definitions': {'ApiResponse': {'type': 'object', 'properties': {'status': {'type': 'integer'}, 'data': {'type': 'string'}, 'msg': {'type': 'string'}, 'request': {'type': 'string'}}}, 'ErrorResponse': {'type': 'object', 'properties': {'error_code': {'type': 'integer', 'format': 'int32'}, 'msg': {'type': 'string'}, 'request': {'type': 'string'}}}, 'User': {'type': 'object', 'properties': {'name': {'type': 'string', 'minLength': 2, 'maxLength': 32}, 'password': {'type': 'string', 'pattern': '^[A-Za-z0-9_*&$#@]{6,22}$', 'minLength': 6, 'maxLength': 32}, 'phone': {'type': 'string', 'pattern': '^1[0-9]{10}$'}, 'email': {'type': 'string', 'pattern': '^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)+$'}}, 'required': ['name', 'password']}, 'Person': {'required': ['username'], 'properties': {'firstName': {'type': 'string'}, 'lastName': {'type': 'string'}, 'username': {'type': 'string'}}}, 'Persons': {'type': 'array', 'items': {'$ref': '#/definitions/Person'}}}, 'parameters': {}}
+definitions = {'definitions': {'ApiResponse': {'type': 'object', 'properties': {'status': {'type': 'integer'}, 'data': {'type': 'string'}, 'msg': {'type': 'string'}, 'request': {'type': 'string'}}}, 'ErrorResponse': {'type': 'object', 'properties': {'error_code': {'type': 'integer', 'format': 'int32'}, 'msg': {'type': 'string'}, 'request': {'type': 'string'}}}, 'User': {'type': 'object', 'properties': {'name': {'type': 'string', 'minLength': 2, 'maxLength': 32}, 'password': {'type': 'string', 'pattern': '^[A-Za-z0-9_*&$#@]{6,22}$', 'minLength': 6, 'maxLength': 32}, 'phone': {'type': 'string', 'pattern': '^1[0-9]{10}$'}, 'email': {'type': 'string', 'pattern': '^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)+$'}}, 'required': ['name', 'password']}}, 'parameters': {}}
 
 validators = {
     ('register', 'POST'): {'json': {'type': 'object', 'properties': {'name': {'description': '用户帐号', 'type': 'string'}, 'pwd': {'description': '登录密码', 'type': 'string'}}, 'required': ['name', 'pwd']}},
-    ('persons', 'GET'): {'args': {'required': [], 'properties': {'pageSize': {'description': 'Number of persons returned', 'type': 'integer'}, 'pageNumber': {'description': 'Page number', 'type': 'integer'}}}},
 }
 
 filters = {
-    ('register', 'POST'): {201: {'headers': None, 'schema': {'$ref': '#/definitions/ApiResponse'}}},
-    ('persons', 'GET'): {200: {'headers': None, 'schema': {'$ref': '#/definitions/ErrorResponse'}}},
+    ('register', 'POST'): {201: {'headers': None, 'schema': {'$ref': '#/definitions/ApiResponse'}}, 400: {'headers': None, 'schema': {'$ref': '#/definitions/ErrorResponse'}}},
 }
 
 scopes = {

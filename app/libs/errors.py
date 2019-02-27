@@ -11,7 +11,7 @@ from werkzeug.exceptions import HTTPException
 
 
 class APIException(HTTPException):
-    code = 500
+    code = 400
     error_code = 9999
     msg = 'sorry, we make a mistake'
 

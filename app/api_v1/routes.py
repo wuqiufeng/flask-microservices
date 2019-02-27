@@ -9,10 +9,8 @@
 from __future__ import absolute_import
 
 from .api.register import Register
-from .api.persons import Persons
 
 
 routes = [
     dict(resource=Register, urls=['/register'], endpoint='register'),
-    dict(resource=Persons, urls=['/persons'], endpoint='persons'),
 ]

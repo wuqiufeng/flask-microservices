@@ -67,31 +67,9 @@
             "schema": {
               "$ref": "#/definitions/ApiResponse"
             }
-          }
-        }
-      }
-    },
-    "/persons": {
-      "get": {
-        "summary": "Get some persons",
-        "description": "Returns a list containing all persons",
-        "parameters": [
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of persons returned",
-            "type": "integer"
           },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Page number",
-            "type": "integer"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "A list of Person",
+          "400": {
+            "description": "\u8bf7\u6c42\u6210\u529f\uff0c\u4f46\u662f\u4e1a\u52a1\u5931\u8d25",
             "schema": {
               "$ref": "#/definitions/ErrorResponse"
             }
@@ -160,28 +138,6 @@
         "name",
         "password"
       ]
-    },
-    "Person": {
-      "required": [
-        "username"
-      ],
-      "properties": {
-        "firstName": {
-          "type": "string"
-        },
-        "lastName": {
-          "type": "string"
-        },
-        "username": {
-          "type": "string"
-        }
-      }
-    },
-    "Persons": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/Person"
-      }
     }
   }
 }
