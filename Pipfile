@@ -42,7 +42,7 @@ Mako = "==1.0.7"
 PyMySQL = "==0.9.3"
 PyYAML = "==3.12"
 SQLAlchemy = "==1.2.15"
-Werkzeug = "==0.14.1"
+Werkzeug = "==0.15.3"
 uwsgi = "*"
 flask-mail = "*"
 
